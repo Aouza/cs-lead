@@ -23,29 +23,26 @@ const CalculatorPage = () => {
 
       <Form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Nome</label>
-          <br></br>
           <input
             type="name"
             id="name"
             name="name"
+            required
             value={name}
             onChange={({ target }) => setName(target.value)}
           />
-          {name}
-          <br></br>
+          <label htmlFor="name">Nome</label>
         </div>
         <div>
-          <label htmlFor="email">E-mail</label>
-          <br></br>
           <input
             type="email"
             id="email"
             name="email"
+            required
             value={email}
             onChange={({ target }) => setEmail(target.value)}
           />
-          {email}
+          <label htmlFor="email">E-mail</label>
         </div>
         <div>
           <button>ENVIAR</button>
