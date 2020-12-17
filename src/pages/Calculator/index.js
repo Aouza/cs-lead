@@ -4,16 +4,27 @@ import { api } from "../../services/api";
 const CalculatorPage = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    api.post("/send", {
-      name,
-      email,
-    });
+    setLoading(true);
+    api
+      .post("/send", {
+        name,
+        email,
+      })
+      .then(function (response) {
+        if (response) {
+          setName("");
+          setEmail("");
+          setLoading(false);
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
 
-    setName("");
-    setEmail("");
     console.log("enviei");
   };
 
@@ -45,7 +56,7 @@ const CalculatorPage = () => {
           <label htmlFor="email">E-mail</label>
         </div>
         <div>
-          <button>ENVIAR</button>
+          {loading ? <button>CARREGANDO...</button> : <button>ENVIAR</button>}
         </div>
       </Form>
     </Container>
