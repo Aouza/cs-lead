@@ -56,7 +56,7 @@ const CalculatorPage = () => {
           <label htmlFor="email">E-mail</label>
         </div>
         <div>
-          {loading ? <button>CARREGANDO...</button> : <button>ENVIAR</button>}
+          {loading ? <button>ENVIANDO...</button> : <button>ENVIAR</button>}
         </div>
       </Form>
     </Container>
