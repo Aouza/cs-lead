@@ -9,7 +9,6 @@ import {
   ContentStepCards,
   LoadingImage,
   LoadingContent,
-  EmailWrapper,
   RadioWrap,
   Result,
   Fieldset,
@@ -224,51 +223,6 @@ const Calculator = () => {
       setCurrentPage(numberUpdated);
     }
   };
-
-  const handleProgressStep = async ({ target }) => {
-    // try {
-    //   let formData = {
-    //     teds:
-    //       target.parentNode.parentNode.children[2].children[0].value,
-    //     saques:
-    //       target.parentNode.parentNode.children[2].children[0].value,
-    //     boletos:
-    //       target.parentNode.parentNode.children[2].children[0].value
-    //   };
-    //   console.log(formData);
-    //   console.log('form', form);
-    //   formRef.current?.setErrors({});
-    //   const schema = Yup.object().shape({
-    //     teds: Yup.number().required('Campo obrigatório'),
-    //     saques: Yup.number().required('Campo obrigatório'),
-    //     boletos: Yup.number().required('Campo obrigatório')
-    //   });
-    //   await schema.validate(formData, {
-    //     abortEarly: false
-    //   });
-    //   let numberUpdated = 0;
-    //   if (currentPage < pages.length - 1) {
-    //     numberUpdated = currentPage + 1;
-    //     setCurrentPage(numberUpdated);
-    //   }
-    //   const porcentagemValue = 100 / (pages.length - 4);
-    //   setProgressBar(porcentagemValue + progressBar);
-    //   pagesRef.current.children[numberUpdated].style.display = 'flex';
-    //   if (numberUpdated !== 0) {
-    //     pagesRef.current.children[numberUpdated - 1].style.display =
-    //       'none';
-    //   }
-    // } catch (err) {
-    //   const errors = getValidationErrors(err);
-    //   formRef.current.setErrors(errors);
-    //   console.log(err);
-    //   if (err) console.log(err.inner);
-    // }
-  };
-
-  // const handleChange = ({ target }) => {
-
-  // };
 
   const handleSubmit = async (data) => {
     console.log(data);
