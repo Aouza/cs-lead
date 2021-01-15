@@ -682,13 +682,19 @@ const Calculator = () => {
             </Result>
 
             <WrapButtons>
-              <Button type="button" onClick={handleBackStep}>
+              <Button
+                type="button"
+                onClick={() => (window.location.href = "/calculator")}
+              >
                 REFAZER SIMULAÇÃO
               </Button>
 
               <Button
                 type="button"
-                onClick={() => (window.location.href = "https://google.com")}
+                onClick={() =>
+                  (window.location.href =
+                    "https://onboarding.contasimples.com/")
+                }
               >
                 ABRA SUA CONTA AGORA
               </Button>
