@@ -103,6 +103,7 @@ const Calculator = () => {
   useEffect(() => {
     const porcentagemValue = 100 / (pages.length - 4);
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     progressBarValue = porcentagemValue + progressBarValue;
     console.log("effect", form);
     setProgressBar(progressBarValue);
