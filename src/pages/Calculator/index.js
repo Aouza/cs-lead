@@ -276,20 +276,6 @@ const Calculator = () => {
   return (
     <Container>
       <Form ref={formRef} onSubmit={handleSubmit} autocomplete="off">
-        <input
-          className="hidden"
-          type="text"
-          style={{
-            display: "none",
-          }}
-        ></input>
-        <input
-          className="hidden"
-          type="password"
-          style={{
-            display: "none",
-          }}
-        ></input>
         <Pages ref={pagesRef}>
           <StepCards>
             <ContentStepCards>
@@ -332,7 +318,7 @@ const Calculator = () => {
               <br /> média por mês?
             </MainTitle>
             <Input
-              type="number"
+              type="text"
               id="ted"
               name="teds"
               label="Digite o número de TEDs"
@@ -406,7 +392,7 @@ const Calculator = () => {
               <br /> média por mês?
             </MainTitle>
             <Input
-              type="number"
+              type="text"
               id="saque"
               name="saques"
               label="Digite o número de saques"
@@ -481,7 +467,7 @@ const Calculator = () => {
               <br /> média por mês?
             </MainTitle>
             <Input
-              type="number"
+              type="text"
               id="boleto"
               name="boletos"
               label="Digite o número de boletos"
