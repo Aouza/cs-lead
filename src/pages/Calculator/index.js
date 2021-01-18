@@ -492,7 +492,7 @@ const Calculator = () => {
               id="boleto"
               name="boletos"
               label="Digite o número de boletos"
-              autoComplete="off"
+              autoComplete="nope"
             />
 
             <WrapButtons>

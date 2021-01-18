@@ -34,6 +34,7 @@ const Input = ({ name, id, label, value, autoComplete, onChange, ...rest }) => {
         value={value}
         onChange={onChange}
         autoComplete={autoComplete}
+        min={0}
         {...rest}
       />
       <label htmlFor={id}>{label}</label>
