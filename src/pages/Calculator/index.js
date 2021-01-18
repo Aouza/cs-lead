@@ -359,16 +359,6 @@ const Calculator = () => {
                     console.log(formData);
                     formRef.current?.setErrors({});
 
-                    const schema = Yup.object().shape({
-                      teds: Yup.number()
-                        .typeError("Preencha um valor válido")
-                        .required("Campo obrigatório"),
-                    });
-
-                    await schema.validate(formData, {
-                      abortEarly: false,
-                    });
-
                     setForm({
                       ...form,
                       ted: formData.teds,
