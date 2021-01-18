@@ -334,7 +334,7 @@ const Calculator = () => {
               <br /> média por mês?
             </MainTitle>
             <Input
-              type="text"
+              type="number"
               id="ted"
               name="teds"
               label="Digite o número de TEDs"
@@ -409,7 +409,7 @@ const Calculator = () => {
               <br /> média por mês?
             </MainTitle>
             <Input
-              type="text"
+              type="number"
               id="saque"
               name="saques"
               label="Digite o número de saques"
@@ -485,7 +485,7 @@ const Calculator = () => {
               <br /> média por mês?
             </MainTitle>
             <Input
-              type="text"
+              type="number"
               id="boleto"
               name="boletos"
               label="Digite o número de boletos"
