@@ -275,7 +275,23 @@ const Calculator = () => {
 
   return (
     <Container>
-      <Form ref={formRef} onSubmit={handleSubmit} autocomplete="off">
+      <Form ref={formRef} onSubmit={handleSubmit} autoComplete="off">
+        <input
+          className="hidden"
+          type="text"
+          style={{
+            display: "none",
+          }}
+          autoComplete="off"
+        ></input>
+        <input
+          className="hidden"
+          type="password"
+          style={{
+            display: "none",
+          }}
+          autoComplete="off"
+        ></input>
         <Pages ref={pagesRef}>
           <StepCards>
             <ContentStepCards>
