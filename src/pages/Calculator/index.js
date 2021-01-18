@@ -215,7 +215,7 @@ const Calculator = () => {
     }
   };
 
-  const handleSubmit = async (data) => {
+  const handleSubmit = async (data, { reset }) => {
     console.log(data);
     try {
       formRef.current?.setErrors({});
@@ -245,6 +245,7 @@ const Calculator = () => {
             setLoading(false);
             localStorage.setItem("@isSubmited", "yes");
             console.log("enviado!!!!");
+            reset();
             handleStep();
 
             if (calculateSavings(form.ted, form.saque, form.boleto) < 0) {
