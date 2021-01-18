@@ -275,7 +275,10 @@ const Calculator = () => {
 
   return (
     <Container>
-      <Form ref={formRef} onSubmit={handleSubmit} autoComplete="__away">
+      <form action="" autoComplete="off">
+        <input type="number" />
+      </form>
+      <Form ref={formRef} onSubmit={handleSubmit} autoComplete="off">
         <input
           className="hidden"
           type="text"
