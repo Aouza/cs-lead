@@ -275,7 +275,7 @@ const Calculator = () => {
 
   return (
     <Container>
-      <form action="" autoComplete="off">
+      <form action="">
         <input type="number" autoComplete="none" />
       </form>
       <Form ref={formRef} onSubmit={handleSubmit} autoComplete="off">
