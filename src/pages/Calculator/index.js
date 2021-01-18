@@ -276,7 +276,7 @@ const Calculator = () => {
   return (
     <Container>
       <form action="" autoComplete="off">
-        <input type="number" autoComplete="off" />
+        <input type="number" autoComplete="none" />
       </form>
       <Form ref={formRef} onSubmit={handleSubmit} autoComplete="off">
         <input
@@ -285,7 +285,7 @@ const Calculator = () => {
           style={{
             display: "none",
           }}
-          autoComplete="off"
+          autoComplete="none"
         ></input>
         <input
           className="hidden"
@@ -293,7 +293,7 @@ const Calculator = () => {
           style={{
             display: "none",
           }}
-          autoComplete="off"
+          autoComplete="none"
         ></input>
         <Pages ref={pagesRef}>
           <StepCards>
@@ -341,7 +341,7 @@ const Calculator = () => {
               id="ted"
               name="teds"
               label="Digite o número de TEDs"
-              autoComplete="name"
+              autoComplete="none"
             />
             <WrapButtons>
               <Button type="button" onClick={handleBackStep}>
@@ -416,7 +416,7 @@ const Calculator = () => {
               id="saque"
               name="saques"
               label="Digite o número de saques"
-              autoComplete="name"
+              autoComplete="off"
             />
             <WrapButtons>
               <Button type="button" onClick={handleReturnBackStep}>
@@ -492,7 +492,7 @@ const Calculator = () => {
               id="boleto"
               name="boletos"
               label="Digite o número de boletos"
-              autoComplete="name"
+              autoComplete="off"
             />
 
             <WrapButtons>

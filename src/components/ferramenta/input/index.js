@@ -4,7 +4,7 @@ import { Container } from "./styles";
 import { useField } from "@unform/core";
 import ErrorHelper from "../errorHelper";
 
-const Input = ({ name, id, label, value, onChange, ...rest }) => {
+const Input = ({ name, id, label, value, autoComplete, onChange, ...rest }) => {
   const { fieldName, defaultValue, error, registerField } = useField(name);
 
   const [isFocused, setIsFocused] = useState(false);
@@ -33,6 +33,7 @@ const Input = ({ name, id, label, value, onChange, ...rest }) => {
         defaultValue={defaultValue}
         value={value}
         onChange={onChange}
+        autoComplete={autoComplete}
         {...rest}
       />
       <label htmlFor={id}>{label}</label>
