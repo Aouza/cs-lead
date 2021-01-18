@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.section`
   padding: 3rem;
@@ -28,7 +28,7 @@ export const Container = styled.section`
   animation: slideUp 0.5s ease;
 
   @media (max-width: 70rem) {
-    padding: 5rem 1rem;
+    padding: 5rem 2rem;
     height: initial;
     box-shadow: none;
 
