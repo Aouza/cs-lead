@@ -13,7 +13,6 @@ import {
   RadioWrap,
   Result,
   Fieldset,
-  InputAutoComplete,
 } from "./styles";
 import { api } from "../../services/api";
 import { getValidationErrors } from "../../utils/getValidationErrors";
@@ -277,8 +276,20 @@ const Calculator = () => {
   return (
     <Container>
       <Form ref={formRef} onSubmit={handleSubmit} autocomplete="off">
-        <InputAutoComplete type="text"></InputAutoComplete>
-        <InputAutoComplete type="password"></InputAutoComplete>
+        <input
+          className="hidden"
+          type="text"
+          style={{
+            display: "none",
+          }}
+        ></input>
+        <input
+          className="hidden"
+          type="password"
+          style={{
+            display: "none",
+          }}
+        ></input>
         <Pages ref={pagesRef}>
           <StepCards>
             <ContentStepCards>

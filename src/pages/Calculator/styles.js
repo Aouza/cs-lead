@@ -228,7 +228,3 @@ export const Fieldset = styled.fieldset`
   display: flex;
   justify-content: flex-start;
 `;
-
-export const InputAutoComplete = styled.input`
-  display: none;
-`;
