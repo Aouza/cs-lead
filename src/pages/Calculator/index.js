@@ -274,7 +274,7 @@ const Calculator = () => {
 
   return (
     <Container>
-      <Form ref={formRef} onSubmit={handleSubmit}>
+      <Form ref={formRef} onSubmit={handleSubmit} autocomplete="off">
         <Pages ref={pagesRef}>
           <StepCards>
             <ContentStepCards>
