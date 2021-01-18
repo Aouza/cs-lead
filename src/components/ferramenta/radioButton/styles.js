@@ -1,8 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   & + div {
-    margin-left: 2rem;
+    > label {
+      margin-left: 2rem;
+    }
   }
 
   > label {
@@ -11,7 +13,7 @@ export const Container = styled.div`
     align-items: center;
 
     &:before {
-      content: '';
+      content: "";
       width: 10px;
       height: 10px;
       display: inline-block;
@@ -26,11 +28,11 @@ export const Container = styled.div`
     margin-right: 0.5rem;
     cursor: pointer;
 
-    &[type='radio'] {
+    &[type="radio"] {
       display: none;
     }
 
-    &[type='radio']:checked + label:before {
+    &[type="radio"]:checked + label:before {
       background-color: #ffffff;
       border: 5px solid #46b34a;
     }

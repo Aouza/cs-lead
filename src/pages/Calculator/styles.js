@@ -36,6 +36,7 @@ export const Pages = styled.div`
 `;
 
 export const MainTitle = styled.h2`
+  width: 100%;
   font-size: 2.4rem;
   line-height: 2.4rem;
   margin-bottom: 1.4rem;
@@ -48,16 +49,26 @@ export const MainTitle = styled.h2`
 
 export const WrapButtons = styled.div`
   display: flex;
+  width: 100%;
   justify-content: space-between;
   margin-top: 2rem;
+
+  button {
+    outline: none;
+  }
+
+  & > button:first-child {
+    background: none;
+    color: #45b34a;
+    border: 2px solid #45b34a;
+    box-shadow: none;
+  }
 
   @media (max-width: 70rem) {
     flex-direction: row !important;
     justify-content: space-between !important;
   }
 `;
-
-export const WrapStepCalculator = styled.div``;
 
 export const Markdown = styled.span`
   color: #45b34a;
@@ -67,7 +78,13 @@ export const ContentStepCards = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 5rem;
+  gap: 3rem;
+
+  > img {
+    @media (max-width: 70rem) {
+      display: none;
+    }
+  }
 
   p {
     font-size: 1rem;
@@ -146,6 +163,8 @@ export const LoadingImage = styled.svg`
   }
 `;
 
+export const WrapStepCalculator = styled.div``;
+
 export const LoadingContent = styled.div`
   display: flex;
   align-items: center;
@@ -154,34 +173,13 @@ export const LoadingContent = styled.div`
   text-align: center;
 `;
 
-// export const EmailWrapper = styled.div`
-//   text-align: center;
-//   background-color: #ffffff;
-//   max-width: 600px;
-//   width: 100%;
-//   margin: 0 auto;
-//   padding: 2rem 4rem;
-//   border-radius: 0.5rem;
-//   box-shadow: 5px 1px 20px rgb(129 126 126 / 10%);
-
-//   @media (max-width: 40rem) {
-//     padding: 1rem;
-//   }
-
-//   > img {
-//     margin-bottom: 1.4rem;
-//   }
-
-//   > h2 {
-//     font-size: 1.4rem;
-//   }
-// `;
-
 export const RadioWrap = styled.div`
-  padding: 2rem 0;
-
   > h4 {
     margin-bottom: 0.8rem;
+
+    @media (max-width: 70rem) {
+      text-align: left;
+    }
   }
 `;
 

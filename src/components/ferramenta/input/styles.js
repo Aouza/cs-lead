@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   border: 1px solid #e5e5e5;
@@ -49,6 +50,10 @@ export const Container = styled.div`
     font-weight: bold;
     color: #333;
     letter-spacing: 0.1rem;
+
+    &[type='number']::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
 
     &:focus ~ label {
       top: 0%;

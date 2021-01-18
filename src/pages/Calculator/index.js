@@ -43,10 +43,10 @@ const Calculator = () => {
 
   const [isSubmited, setIsSubmited] = useState("");
   const [totalOperation, setTotalOperation] = useState(0);
-  const pagesRef = useRef();
 
   const { progressBar, setProgressBar } = useContext(GlobalContext);
 
+  const pagesRef = useRef();
   const formRef = useRef();
 
   const radioOptions = [
@@ -92,6 +92,7 @@ const Calculator = () => {
   useEffect(() => {
     const pagesList = pagesRef.current.children;
     const isSubmited = localStorage.getItem("@isSubmited");
+
     setIsSubmited(isSubmited);
 
     setPages(pagesList);
@@ -105,21 +106,8 @@ const Calculator = () => {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     progressBarValue = porcentagemValue + progressBarValue;
-    console.log("effect", form);
     setProgressBar(progressBarValue);
   }, [pages, form]);
-
-  // const handleChange = ({ target }) => {
-  //   setTed(target.value);
-
-  //   console.log(valueRef.current.children[1]);
-
-  //   valueRef.current.children[1].value
-  //     ? setHasValue(true)
-  //     : setHasValue(false);
-  // };
-
-  //calculo da ferramenta
 
   const calculate = (ted, saque, boleto) => {
     if (calculateSavings(ted, saque, boleto) < 0) {
@@ -239,6 +227,11 @@ const Calculator = () => {
       });
 
       setLoading(true);
+
+      await schema.validate(data, {
+        abortEarly: false,
+      });
+
       api
         .post("/send", {
           name: data.name,
@@ -268,22 +261,18 @@ const Calculator = () => {
 
         .catch(function (error) {
           console.log(error);
+          setLoading(false);
         });
-
-      await schema.validate(data, {
-        abortEarly: false,
-      });
     } catch (err) {
       const errors = getValidationErrors(err);
       formRef.current.setErrors(errors);
       console.log(err.inner);
+      setLoading(false);
     }
   };
 
   return (
     <Container>
-      <h1>Calculadora</h1>
-
       <Form ref={formRef} onSubmit={handleSubmit}>
         <Pages ref={pagesRef}>
           <StepCards>
@@ -298,12 +287,12 @@ const Calculator = () => {
                   Que os grandes bancos cobram altas tarifas sobre os serviços
                   oferecidos você já sabe.
                 </p>
-                <br />
+
                 <p>
                   Mas você já parou para pensar no quanto isso representa ao
                   longo de um ano?
                 </p>
-                <br />
+
                 <p>
                   Foi para isso que nós da Conta Simples fizemos essa
                   calculadora.{" "}
@@ -351,7 +340,6 @@ const Calculator = () => {
                     const schema = Yup.object().shape({
                       teds: Yup.number()
                         .typeError("Preencha um valor válido")
-                        .positive("Preencha um valor válido")
                         .required("Campo obrigatório"),
                     });
 
@@ -648,7 +636,7 @@ const Calculator = () => {
                 <RadioWrap>
                   <h4>Possui CNPJ?</h4>
 
-                  <Fieldset id="cnpj">
+                  <Fieldset id="cnpj" name="cnpj">
                     <RadioButton name="cnpj" options={radioOptions} />
                   </Fieldset>
                 </RadioWrap>

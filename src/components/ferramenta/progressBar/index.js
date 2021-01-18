@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
-import { GlobalContext } from "../../../hooks/GlobalContext";
-import { Container, Progress } from "./styles";
+import React, { useContext } from 'react';
+import { GlobalContext } from '../../../hooks/GlobalContext';
+import { Container, Progress } from './styles';
 
 const ProgressBar = () => {
   const { progressBar } = useContext(GlobalContext);

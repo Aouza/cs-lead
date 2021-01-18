@@ -48,10 +48,10 @@ const RadioButton = ({ label, name, options, ...rest }) => {
             <label htmlFor={option.id} key={option.id}>
               {option.label}
             </label>
-            <ErrorHelper>{error}</ErrorHelper>
           </Container>
         );
       })}
+      <ErrorHelper>{error}</ErrorHelper>
     </>
   );
 };
