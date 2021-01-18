@@ -275,7 +275,7 @@ const Calculator = () => {
 
   return (
     <Container>
-      <Form ref={formRef} onSubmit={handleSubmit} autoComplete="off">
+      <Form ref={formRef} onSubmit={handleSubmit} autoComplete="__away">
         <input
           className="hidden"
           type="text"
@@ -338,7 +338,7 @@ const Calculator = () => {
               id="ted"
               name="teds"
               label="Digite o número de TEDs"
-              autoComplete="off"
+              autoComplete="__away"
             />
             <WrapButtons>
               <Button type="button" onClick={handleBackStep}>
@@ -413,7 +413,7 @@ const Calculator = () => {
               id="saque"
               name="saques"
               label="Digite o número de saques"
-              autoComplete="off"
+              autoComplete="__away"
             />
             <WrapButtons>
               <Button type="button" onClick={handleReturnBackStep}>
@@ -489,7 +489,7 @@ const Calculator = () => {
               id="boleto"
               name="boletos"
               label="Digite o número de boletos"
-              autoComplete="off"
+              autoComplete="__away"
             />
 
             <WrapButtons>
