@@ -338,10 +338,10 @@ const Calculator = () => {
             </MainTitle>
             <Input
               type="number"
-              id="teste"
+              id="ted"
               name="teds"
               label="Digite o número de TEDs"
-              autoComplete="none"
+              autoComplete="cc-csc"
             />
             <WrapButtons>
               <Button type="button" onClick={handleBackStep}>
@@ -358,6 +358,16 @@ const Calculator = () => {
                     };
                     console.log(formData);
                     formRef.current?.setErrors({});
+
+                    const schema = Yup.object().shape({
+                      teds: Yup.number()
+                        .typeError("Preencha um valor válido")
+                        .required("Campo obrigatório"),
+                    });
+
+                    await schema.validate(formData, {
+                      abortEarly: false,
+                    });
 
                     setForm({
                       ...form,
@@ -403,10 +413,10 @@ const Calculator = () => {
             </MainTitle>
             <Input
               type="number"
-              id="opa"
+              id="saque"
               name="saques"
               label="Digite o número de saques"
-              autoComplete="off"
+              autoComplete="cc-csc"
             />
             <WrapButtons>
               <Button type="button" onClick={handleReturnBackStep}>
@@ -479,10 +489,10 @@ const Calculator = () => {
             </MainTitle>
             <Input
               type="number"
-              id="hello"
+              id="boleto"
               name="boletos"
               label="Digite o número de boletos"
-              autoComplete="nope"
+              autoComplete="cc-csc"
             />
 
             <WrapButtons>
