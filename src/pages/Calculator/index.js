@@ -5,6 +5,7 @@ import {
   MainTitle,
   Markdown,
   WrapButtons,
+  WrapButtonLead,
   WrapStepCalculator,
   ContentStepCards,
   LoadingImage,
@@ -287,12 +288,12 @@ const Calculator = () => {
                   Que os grandes bancos cobram altas tarifas sobre os serviços
                   oferecidos você já sabe.
                 </p>
-
+                <br />
                 <p>
                   Mas você já parou para pensar no quanto isso representa ao
                   longo de um ano?
                 </p>
-
+                <br />
                 <p>
                   Foi para isso que nós da Conta Simples fizemos essa
                   calculadora.{" "}
@@ -641,13 +642,13 @@ const Calculator = () => {
                   </Fieldset>
                 </RadioWrap>
 
-                <div>
+                <WrapButtonLead>
                   {loading ? (
                     <Button>FINALIZANDO...</Button>
                   ) : (
                     <Button>VER RESULTADO</Button>
                   )}
-                </div>
+                </WrapButtonLead>
               </div>
             </ContentStepCards>
           </StepCards>

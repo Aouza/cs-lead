@@ -10,6 +10,10 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
+  button {
+    outline: none;
+  }
+
   > form {
     display: flex;
     gap: 1rem;
@@ -53,10 +57,6 @@ export const WrapButtons = styled.div`
   justify-content: space-between;
   margin-top: 2rem;
 
-  button {
-    outline: none;
-  }
-
   & > button:first-child {
     background: none;
     color: #45b34a;
@@ -67,6 +67,14 @@ export const WrapButtons = styled.div`
   @media (max-width: 70rem) {
     flex-direction: row !important;
     justify-content: space-between !important;
+  }
+`;
+
+export const WrapButtonLead = styled.div`
+  > button {
+    @media (max-width: 70rem) {
+      width: 100%;
+    }
   }
 `;
 
@@ -163,7 +171,13 @@ export const LoadingImage = styled.svg`
   }
 `;
 
-export const WrapStepCalculator = styled.div``;
+export const WrapStepCalculator = styled.div`
+  > button {
+    @media (max-width: 70rem) {
+      width: 100%;
+    }
+  }
+`;
 
 export const LoadingContent = styled.div`
   display: flex;
