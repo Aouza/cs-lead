@@ -338,7 +338,7 @@ const Calculator = () => {
             </MainTitle>
             <Input
               type="number"
-              id="ted"
+              id="teds"
               name="teds"
               label="Digite o número de TEDs"
               autoComplete="none"
@@ -413,7 +413,7 @@ const Calculator = () => {
             </MainTitle>
             <Input
               type="number"
-              id="saque"
+              id="saques"
               name="saques"
               label="Digite o número de saques"
               autoComplete="off"
@@ -489,7 +489,7 @@ const Calculator = () => {
             </MainTitle>
             <Input
               type="number"
-              id="boleto"
+              id="boletos"
               name="boletos"
               label="Digite o número de boletos"
               autoComplete="nope"
