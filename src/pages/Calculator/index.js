@@ -99,11 +99,13 @@ const Calculator = () => {
     setPages(pagesList);
 
     pagesRef.current.children[currentPage].style.display = "flex";
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     const porcentagemValue = 100 / (pages.length - 4);
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     progressBarValue = porcentagemValue + progressBarValue;
     setProgressBar(progressBarValue);
   }, [pages, form]);
