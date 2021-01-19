@@ -13,6 +13,19 @@ export const Container = styled.section`
   justify-content: center;
   box-shadow: -15px 20px 0 #ffffffab, -28px 34px 0 #ffffff59;
 
+  &:last-child {
+    div {
+      &:last-child {
+        > button {
+          @media (max-width: 70rem) {
+            width: 100%;
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+
   @keyframes slideUp {
     to {
       transform: translateY(0%);
@@ -28,7 +41,7 @@ export const Container = styled.section`
   animation: slideUp 0.5s ease;
 
   @media (max-width: 70rem) {
-    padding: 5rem 2rem;
+    padding: 5rem 1rem;
     height: initial;
     box-shadow: none;
 

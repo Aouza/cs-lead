@@ -51,10 +51,28 @@ export const Container = styled.div`
     color: #333;
     letter-spacing: 0.1rem;
 
-    &[type="number"]::-webkit-inner-spin-button {
-      -webkit-appearance: none;
+    &:-webkit-autofill {
+      box-shadow: 0 0 0px 1000px white inset;
+      -webkit-box-shadow: 0 0 0px 1000px white inset;
     }
 
+    &:-webkit-autofill:focus {
+      box-shadow: 0 0 0 50px white inset;
+      -webkit-box-shadow: 0 0 0 50px white inset;
+      -webkit-text-fill-color: #333;
+    }
+
+    -webkit-text-fill-color: #333 !important;
+
+    &[type="number"]::-webkit-outer-spin-button,
+    &[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &[type="number"] {
+      -moz-appearance: textfield;
+    }
     &:focus ~ label {
       top: 0%;
       font-size: 0.8rem;
