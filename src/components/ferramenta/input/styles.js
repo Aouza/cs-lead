@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
@@ -46,10 +46,10 @@ export const Container = styled.div`
     padding: 0 0.9rem;
     height: 4rem;
     border-radius: 0.8rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #333;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.05rem;
 
     &:-webkit-autofill {
       box-shadow: 0 0 0px 1000px white inset;
@@ -64,13 +64,13 @@ export const Container = styled.div`
 
     -webkit-text-fill-color: #333 !important;
 
-    &[type="number"]::-webkit-outer-spin-button,
-    &[type="number"]::-webkit-inner-spin-button {
+    &[type='number']::-webkit-outer-spin-button,
+    &[type='number']::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
     }
 
-    &[type="number"] {
+    &[type='number'] {
       -moz-appearance: textfield;
     }
     &:focus ~ label {

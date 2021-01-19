@@ -1,11 +1,26 @@
-import React, { useCallback, useEffect, useState, useRef } from "react";
-import { Container } from "./styles";
+import React, {
+  useCallback,
+  useEffect,
+  useState,
+  useRef
+} from 'react';
+import { Container } from './styles';
 
-import { useField } from "@unform/core";
-import ErrorHelper from "../errorHelper";
+import { useField } from '@unform/core';
+import ErrorHelper from '../errorHelper';
 
-const Input = ({ name, id, label, value, autoComplete, onChange, ...rest }) => {
-  const { fieldName, defaultValue, error, registerField } = useField(name);
+const Input = ({
+  name,
+  id,
+  label,
+  value,
+  autoComplete,
+  onChange,
+  ...rest
+}) => {
+  const { fieldName, defaultValue, error, registerField } = useField(
+    name
+  );
 
   const [isFocused, setIsFocused] = useState(false);
   const [isFilled, setIsFilled] = useState(false);
@@ -15,7 +30,7 @@ const Input = ({ name, id, label, value, autoComplete, onChange, ...rest }) => {
     registerField({
       name: fieldName,
       ref: inputRef.current,
-      path: "value",
+      path: 'value'
     });
   }, [fieldName, registerField]);
 
@@ -24,7 +39,11 @@ const Input = ({ name, id, label, value, autoComplete, onChange, ...rest }) => {
     inputRef.current?.value ? setIsFilled(true) : setIsFilled(false);
   }, []);
   return (
-    <Container isErrored={!!error} isFilled={isFilled} isFocused={isFocused}>
+    <Container
+      isErrored={!!error}
+      isFilled={isFilled}
+      isFocused={isFocused}
+    >
       <input
         id={id}
         ref={inputRef}
@@ -32,9 +51,8 @@ const Input = ({ name, id, label, value, autoComplete, onChange, ...rest }) => {
         onBlur={handleInputBlur}
         defaultValue={defaultValue}
         value={value}
-        onChange={onChange}
         autoComplete={autoComplete}
-        min={0}
+        onChange={onChange}
         {...rest}
       />
       <label htmlFor={id}>{label}</label>

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   & + div {
@@ -13,9 +13,9 @@ export const Container = styled.div`
     align-items: center;
 
     &:before {
-      content: "";
-      width: 10px;
-      height: 10px;
+      content: '';
+      width: 20px;
+      height: 20px;
       display: inline-block;
       background-color: #ffffff;
       border: 5px solid #eaeaea;
@@ -28,11 +28,11 @@ export const Container = styled.div`
     margin-right: 0.5rem;
     cursor: pointer;
 
-    &[type="radio"] {
+    &[type='radio'] {
       display: none;
     }
 
-    &[type="radio"]:checked + label:before {
+    &[type='radio']:checked + label:before {
       background-color: #ffffff;
       border: 5px solid #46b34a;
     }

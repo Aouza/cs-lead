@@ -46,7 +46,7 @@ export const MainTitle = styled.h2`
   margin-bottom: 1.4rem;
 
   @media (max-width: 70rem) {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     line-height: 1.8rem;
   }
 `;

@@ -99,13 +99,11 @@ const Calculator = () => {
     setPages(pagesList);
 
     pagesRef.current.children[currentPage].style.display = "flex";
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     const porcentagemValue = 100 / (pages.length - 4);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     progressBarValue = porcentagemValue + progressBarValue;
     setProgressBar(progressBarValue);
   }, [pages, form]);
@@ -245,8 +243,8 @@ const Calculator = () => {
             setLoading(false);
             localStorage.setItem("@isSubmited", "yes");
             console.log("enviado!!!!");
-            reset();
             handleStep();
+            reset();
 
             if (calculateSavings(form.ted, form.saque, form.boleto) < 0) {
               setTotalOperation(
@@ -289,12 +287,12 @@ const Calculator = () => {
                   Que os grandes bancos cobram altas tarifas sobre os serviços
                   oferecidos você já sabe.
                 </p>
-                <br />
+
                 <p>
                   Mas você já parou para pensar no quanto isso representa ao
                   longo de um ano?
                 </p>
-                <br />
+
                 <p>
                   Foi para isso que nós da Conta Simples fizemos essa
                   calculadora.{" "}
